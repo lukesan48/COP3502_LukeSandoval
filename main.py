@@ -4,6 +4,8 @@ def encode(user_input):
     encoded_pass = ''. join(encoded_pass)
     return encoded_pass
 
+def decode(user_input):
+    pass
 
 def menu():
     print("Menu\n-------------\n1. Encode\n2. Decode\n3. Quit\n")
@@ -18,8 +20,9 @@ while option != 3:
         print("Your password has been encoded and stored!")
         print()
     elif option == 2:
-        decoded_pass = decode(encoded_pass)
-        print(f"The encoded password is {encoded_pass}, and the original password is {decoded_pass}.")
-        print()
+        pass
+        #decoded_pass = decode(encoded_pass)
+        #print(f"The encoded password is {encoded_pass}, and the original password is {decoded_pass}.")
+        #print()
     elif option == 3:
         break
