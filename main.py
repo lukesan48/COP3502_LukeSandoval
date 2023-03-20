@@ -4,8 +4,11 @@ def encode(user_input):  # Luke Sandoval
     encoded_pass = ''. join(encoded_pass)  # join elements into str
     return encoded_pass
 
-def decode(user_input):
-    pass
+def decode(user_input):  # Trevor Robertson
+    decoded_pass = ""
+    for num in user_input:
+        decoded_pass = decoded_pass + str(int(num) - 3)
+    return decoded_pass
 
 def menu():
     print("Menu\n-------------\n1. Encode\n2. Decode\n3. Quit\n")
