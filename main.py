@@ -1,13 +1,13 @@
-def encode(user_input):  # Luke Sandoval
-    encoded_list = [int(user_input[i]) + 3 for i in range(len(user_input))]  # create list with each element + 3
-    encoded_pass = [str(element) for element in encoded_list]  # conv each element into str
-    encoded_pass = ''. join(encoded_pass)  # join elements into str
+def encode(user_input):
+    encoded_list = [(int(user_input[i]) + 3) % 10 for i in range(len(user_input))]
+    encoded_pass = [str(element) for element in encoded_list]
+    encoded_pass = ''. join(encoded_pass)
     return encoded_pass
 
 def decode(user_input):  # Trevor Robertson
     decoded_pass = ""
     for num in user_input:
-        decoded_pass = decoded_pass + str(int(num) - 3)
+        decoded_pass = decoded_pass + str((int(num) - 3) % 10)
     return decoded_pass
 
 def menu():
